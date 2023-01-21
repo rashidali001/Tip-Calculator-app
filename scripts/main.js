@@ -89,7 +89,7 @@ function revert()
     }
     
 }
-/*
+
 function destroy()
 {
     tip_amount_value.innerHTML = 0;
@@ -102,10 +102,3 @@ function destroy()
     no_of_people.value = '';
 
 }
-let body = document.querySelector('body');
-body.addEventListener('click', function(){
-    if (!custom.value){
-        tip_amount_value.innerHTML = 0;
-        total_amount_value.innerHTML = 0;
-    }
-});*/

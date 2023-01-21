@@ -9,7 +9,81 @@ body{
     height: 100vh;
     background-color: hsl(185, 41%, 84%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+main{
+    width:100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+main > div.division{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+div.division:first-child{
+    background-color: inherit;
+}
+/* bill styles */
+div.bill > p, div.tip > p, div.number-of-people > p{
+    font-weight: 700;
+}
+#bill, #people{
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 10px;
+    background-image: url('/images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    margin-top: 5px;
+    outline: none;
+}
+/* tip styles */
+div.tip{
+    margin: 10px 0;
+}
+div.tip-percentages{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+div.tip-percentages > div , div.tip-percentages > input{
+    width: 45%;
+    border-radius: 3px;
+    font-size: 24px;
+}
+div.tip-percentages > div{
+    text-align: center;
+    background-color: hsl(183, 100%, 15%);
+    padding: 5px;
+    color: #fff;
+    margin: 3px 0;
+}
+div.tip-percentages > input{
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    text-align: right;
+    font-size: 700;
+    color: hsl(183, 100%, 15%);
+    outline: none;
+}
+/* Number of people */
+#people{
+    background-image: url('/images/icon-person.svg');
+}
 
+/* second div */
+
+div.division:last-child{
+    background-color: hsl(183, 100%, 15%);
+    padding: 5px 15px 5px 10px;
+}

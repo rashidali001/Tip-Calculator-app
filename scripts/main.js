@@ -89,7 +89,7 @@ function revert()
     }
     
 }
-
+/*
 function destroy()
 {
     tip_amount_value.innerHTML = 0;
@@ -108,4 +108,4 @@ body.addEventListener('click', function(){
         tip_amount_value.innerHTML = 0;
         total_amount_value.innerHTML = 0;
     }
-});
+});*/

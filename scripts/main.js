@@ -25,6 +25,7 @@ function unselect()
     for (let i = 0; i < percentages.length; i++){
         percentages[i].classList.remove('selected');
     }
+    keep_checking();
 }
 
 function keep_checking()
@@ -32,13 +33,33 @@ function keep_checking()
     if (bill.value > 0)
     {
         for (let i = 0; i < percentages.length; i++){
-            if(percentages[i].classList.contains('selected'))
+            if(percentages[i].classList.contains('selected') || (custom.value > 0))
             {
                 if (no_of_people.value < 1)
                 {
                     let error = document.querySelector('#error');
                     error.style.display = 'block';
                     no_of_people.style.border = '1px solid red';
+                }
+                if (no_of_people.value > 0)
+                {
+                    let per_person = (bill.value) / (no_of_people.value);
+                    let tip_per_person;
+                    let total_per_person;
+                    if (custom.value)
+                    {
+                        tip_per_person = per_person * (custom.value / 100); 
+                    }
+                    if (percentages[i].classList.contains('selected'))
+                    {
+                        tip_per_person = per_person * (percentages[i].id / 100);
+                    }
+                    total_per_person = per_person + tip_per_person;
+
+                    tip_amount_value.innerHTML = '$' + tip_per_person.toFixed(2);
+                    total_amount_value.innerHTML = '$' + total_per_person.toFixed(2);
+                    
+
                 }
             }
         }
@@ -57,4 +78,14 @@ function checknumberofpeople()
         error.style.display = 'block';
         no_of_people.style.border = '1px solid red';
     }
+    keep_checking();
+}
+
+function revert()
+{
+    if (!custom.value){
+        tip_amount_value.innerHTML = 0;
+        total_amount_value.innerHTML = 0;
+    }
+    
 }

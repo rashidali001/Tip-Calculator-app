@@ -26,7 +26,7 @@
     <div class="division">
       <div class="bill">
         <p>Bill</p>
-        <input type="number" name="number" id="bill" placeholder="0.0" autofocus="no" step="any" min="0" onkeyup="checkbilling()">
+        <input type="number" name="number" id="bill" placeholder="0.0" autofocus="no" step="any" min="0">
       </div>
       <div class="tip">
         <p>Select Tip %</p>
@@ -36,7 +36,7 @@
           <div id="15" onclick="select(3)" class="percentages">15%</div>
           <div id="25" onclick="select(4)" class="percentages">25%</div>
           <div id="50" onclick="select(5)" class="percentages">50%</div>
-          <input type="number" placeholder="Custom" min="0" onkeypress="unselect()" id="custom">
+          <input type="number" placeholder="Custom" min="0" onfocus="unselect()" onkeyup="keep_checking()" onchange="revert()" onclick="revert()" id="custom">
         </div>
       </div>
       <div class="number-of-people">

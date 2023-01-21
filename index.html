@@ -31,16 +31,18 @@
       <div class="tip">
         <p>Select Tip %</p>
         <div class="tip-percentages">
-          <div id="5">5%</div>
-          <div id="10">10%</div>
-          <div id="15">15%</div>
-          <div id="25">25%</div>
-          <div id="50">50%</div>
-          <input type="number" placeholder="Custom" min="0">
+          <div id="5"  onclick="select(1)" class="percentages">5%</div>
+          <div id="10" onclick="select(2)" class="percentages">10%</div>
+          <div id="15" onclick="select(3)" class="percentages">15%</div>
+          <div id="25" onclick="select(4)" class="percentages">25%</div>
+          <div id="50" onclick="select(5)" class="percentages">50%</div>
+          <input type="number" placeholder="Custom" min="0" onkeypress="unselect()" id="custom">
         </div>
       </div>
       <div class="number-of-people">
-        <p>Number of people</p>
+        <div>
+          <p>Number of people</p>
+        </div>        
         <input type="number" name="number_of_people" id="people" placeholder="0" autofocus="no" min="0">
       </div>
     </div>

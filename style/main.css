@@ -122,3 +122,7 @@ button:hover{
     opacity: 80%;
     cursor: pointer;
 }
+/* Selected */
+div.selected{
+    background-color: hsl(172, 67%, 45%) !important;
+}

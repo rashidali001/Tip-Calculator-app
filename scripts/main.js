@@ -89,3 +89,23 @@ function revert()
     }
     
 }
+
+function destroy()
+{
+    tip_amount_value.innerHTML = 0;
+    total_amount_value.innerHTML = 0;
+    custom.value = '';
+    bill.value = '';
+    for (let i = 0; i < percentages.length; i++){
+        percentages[i].classList.remove('selected');
+    }
+    no_of_people.value = '';
+
+}
+let body = document.querySelector('body');
+body.addEventListener('click', function(){
+    if (!custom.value){
+        tip_amount_value.innerHTML = 0;
+        total_amount_value.innerHTML = 0;
+    }
+});

@@ -19,6 +19,8 @@ main{
     padding: 20px 10px;
     border-radius: 10px;
     margin: 30px 0;
+    display: flex;
+    flex-direction: column;
 }
 main > div.division{
     width: 90%;
@@ -67,6 +69,10 @@ div.tip-percentages > div{
     padding: 5px;
     color: #fff;
     margin: 3px 0;
+    cursor: pointer;
+}
+div.tip-percentages > div:hover{
+    background-color: hsl(172, 67%, 45%);
 }
 div.tip-percentages > input{
     background-color: hsl(189, 41%, 97%);
@@ -83,7 +89,36 @@ div.tip-percentages > input{
 
 /* second div */
 
-div.division:last-child{
+div.division:nth-child(2){
+    margin: 10px auto;
     background-color: hsl(183, 100%, 15%);
-    padding: 5px 15px 5px 10px;
+    padding: 15px 10px;
+    border-radius: 7px;
+    color: #fff;
+}
+div.total{
+    margin: 10px 0;
+}
+button{
+    width: 100%;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+div.tip-amount, div.total{
+    display: flex;
+    justify-content: space-between;
+}
+#tip-amount-value, #total-amount-value{
+    font-size: 25px;
+    color: hsl(172, 67%, 45%);
+}
+button:hover{
+    opacity: 80%;
+    cursor: pointer;
 }

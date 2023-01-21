@@ -1,0 +1,15 @@
+@media (min-width: 800px){
+    main{
+        width: 80%;
+        margin: 30px auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    main > div.division{
+        width: 48% !important;
+    }
+    div.division:nth-child(2){
+        justify-content: space-between;
+    }
+}
